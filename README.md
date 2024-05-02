@@ -15,3 +15,6 @@ This app uses HTML XPaths to track the location of each town. now as a demo ther
 **5. Type the town name in quotation marks on the left side and value in the right side example:-**
 
 'Envy': '//* [@id="app"]/div[1]/div[1]/div[10]/div[697]'
+
+## How to use?
+Just run the main.py script, and correctly input the questions and it will open a new microsoft edge instance and your result will be outputted in the console!
