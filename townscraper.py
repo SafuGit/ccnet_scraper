@@ -4,6 +4,7 @@ from selenium import webdriver
 import time
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
 from hider import Hider
 import pandas as pd
 
@@ -14,7 +15,7 @@ class TownScraper:
         self.world = world
         
         self.driver = webdriver.Edge()
-        wait = WebDriverWait(driver=self.driver, timeout=20)
+        self.wait = WebDriverWait(driver=self.driver, timeout=20)
         self.hider = Hider()
 
     def scrape_towns(self):
@@ -24,6 +25,7 @@ class TownScraper:
         time.sleep(2)
         self.hider.hide(driver=self.driver)
         for town_name, town_xpath in self.towns.items():
+            self.wait.until(EC.element_to_be_clickable((By.XPATH, f"{town_xpath}")))
             self.driver.execute_script(f'''var xpath = '{town_xpath}';
                             var element = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
                             element.click();''')

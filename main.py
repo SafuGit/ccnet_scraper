@@ -28,7 +28,6 @@ towns = {
 }
 
 # Main Loop
-filepath = str(input('Where would you like to save your csv file? (Copy-Paste the directory) '))
 start = str(input('\nWould you like to start (Y/N)')).lower()
 scraper = TownScraper(towns, world)
 while start == 'y':
