@@ -1,0 +1,7 @@
+1. Microsoft Edge (with webdriver installed)
+2. Python
+3. bs4 (beautifulsoup4)
+4. selenium
+5. pandas 
+
+pip install bs4 selenium pandas
