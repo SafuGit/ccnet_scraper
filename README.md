@@ -1,10 +1,6 @@
 # ccnet_scraper
 this is a WebScraper that extracts data from the popular geopolital game CCNets Map Website, and gives you their Upkeep and Bank Amount values.
 
-## Requirements
-1. Microsoft Edge (with webdriver installed)
-2. Python 
-
 ## How to add more towns?
 This app uses HTML XPaths to track the location of each town. now as a demo there is already 4 towns listed in the software but if you want to add functionality for more towns here is the step by step guide
 
