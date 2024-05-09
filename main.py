@@ -21,17 +21,17 @@ print("""  ______   ______ .__   __.  _______ .___________.
 world = 'https://map.ccnetmc.com/nationsmap/#world;flat;7184,64,-5152;0'
 
 towns = {
-    'Envy': '//*[@id="app"]/div[1]/div[1]/div[10]/div[697]',
-    'Greed': '//*[@id="app"]/div[1]/div[1]/div[10]/div[85]',
-    'Camelot': '//*[@id="app"]/div[1]/div[1]/div[10]/div[135]',
-    'Arizona': '//*[@id="app"]/div[1]/div[1]/div[10]/div[309]'
+    'Envy': 'style="margin-left: -8px; margin-top: -8px; height: 16px; transform: translate3d(823px, -128px, 0px);"',
+    'Greed': 'style="margin-left: -8px; margin-top: -8px; height: 16px; transform: translate3d(847px, -103px, 0px);"',
+    'Camelot': 'style="margin-left: -8px; margin-top: -8px; height: 16px; transform: translate3d(786px, 348px, 0px);"',
+    'Arizona': 'style="margin-left: -8px; margin-top: -8px; height: 16px; transform: translate3d(-358px, -16px, 0px);"'
 }
 
 # Main Loop
-start = str(input('\nWould you like to start (Y/N)')).lower()
+start = str(input('\nOpen Browser? (Y/N)')).lower()
 scraper = TownScraper(towns, world)
 while start == 'y':
     scraper.scrape_towns()
-    start = str(input('do you want to quit or re-scan? (Y/N): ')).lower()
+    start = str(input('do you want to rescan? (Y/N): ')).lower()
 if start != "y":
     scraper.quit()
