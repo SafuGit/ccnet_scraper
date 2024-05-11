@@ -10,18 +10,18 @@ executables = [Executable("main.py", base=base)]
 
 options = {
     "build_exe": {
-        "packages": ['townscraper', 'bs4', 'selenium', 'time', 'hider', 'pandas'],  # List of packages to include
+        "packages": ['bs4', 'selenium', 'time', 'pandas', 'win10toast'],  # List of packages to include
         "include_files": [''],  # List of additional files to include
     },
 }
 
 setup(
-    name="CCNet Scraper",
+    name="CCNet Scraper (Edge)",
     version="1.0",
     license = 'MIT',
     author = 'Safu',
     url = 'https://github.com/SafuGit/ccnet_scraper',
     description="Scrape your towns upkeep",
-    options=options,
+
     executables=executables
 )
